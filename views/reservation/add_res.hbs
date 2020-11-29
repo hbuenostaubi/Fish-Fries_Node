@@ -1,0 +1,25 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+<form class="post" method="post" action="/reservations/save">
+<!--    allows user to enter input values and resubmit-->
+
+        <input type="hidden" name="saveMethod"
+            value = "{{#if doCreate}}create{{else}}update{{/if}}"/>
+    <div class="col-lg-10 align-items-center">
+
+    <p >
+        Name: <input type="text" name="title"/><br/>
+    </p>
+    <p>
+        Time: <input type="datetime-local" name="tableTime"/><br/>
+    </p>
+    <p>
+        Total Party: <input type="text" name="tableParty"/><br/>
+    </p>
+    <textarea rows=5 cols=40 name="body"></textarea> <br/>
+
+    <input type="submit" value="Submit"/>
+<!--    value above gets displayed-->
+    </div>
+</form>

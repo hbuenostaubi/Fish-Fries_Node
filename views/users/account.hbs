@@ -1,0 +1,38 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+<div class="post">
+    <div class="row justify-content-center">
+        {{#if flashMessages}}
+            {{#if flashMessages.succes}}
+                <span class="text-success">{{flashMessages.success}}</span>
+            {{else}}
+                <span class="text-danger">{{flashMessages.error}}</span>
+            {{/if}}
+        {{/if}}
+    </div>
+</div>
+
+
+<div class="col-lg-10 align-items-center">
+    <p class="post">First Name: {{nameFirst}}</p>
+    <p class="post">First Name: {{nameLast}}</p>
+    <p class="post">E-mail: {{email}}</p>
+    <p class="post">Phone number: {{phone}}</p>
+
+
+</div>
+
+
+<span class="col-lg-10 align-items-center"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete Account
+    </button> </span>
+
+<span><button class="btn btn-primary" onclick="location.href='/users/edit_account'">Edit Account</Button> </span>
+
+</p>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{> modal_account }}
+</div>

@@ -1,0 +1,21 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+<div class="col-lg-10 align-items-center">
+<p class="post">Reservation Name: {{resTitle}}</p>
+<p class="post">Time: {{tableTime}}</p>
+<p class="post">Party Total: {{tableParty}}</p>
+<p class="post">{{resBody}}</p>
+<p class="post">
+
+    <span > <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Delete Reservation
+    </button> </span>
+
+    <span><button class="btn btn-primary" onclick="location.href='/reservations/edit?id={{resId}}'">Edit Reservation</Button> </span>
+
+</p>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{{> modal }}
+</div>

@@ -1,0 +1,12 @@
+<!--    flash messages from app.js app.use--flashMessages-->
+<!--      success comes from router/users--flash success in register post-->
+<div class="row justify-content-center m-2">
+<!--    we do an extra set of curly brackets to render html from routes/users.js flashmsgs w/ </br> or newline-->
+    {{#if flashMessages}}
+        {{#if flashMessages.success}}
+            <span class="text-success">{{{flashMessages.success}}}</span>
+        {{else}}
+            <span class="text-danger">{{{flashMessages.error}}}</span>
+        {{/if}}
+    {{/if}}
+</div>

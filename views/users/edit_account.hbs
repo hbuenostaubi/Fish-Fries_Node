@@ -1,0 +1,47 @@
+
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<div class="post">
+    <div class="row justify-content-center">
+        {{#if flashMessages}}
+            {{#if flashMessages.succes}}
+                <span class="text-success">{{flashMessages.success}}</span>
+            {{else}}
+                <span class="text-danger">{{flashMessages.error}}</span>
+            {{/if}}
+        {{/if}}
+    </div>
+</div>
+
+<form class="post" method="post" action="/users/save">
+    <!--    allows user to enter input values and resubmit and save-->
+<!--    <input type="hidden" name="saveMethod"-->
+<!--           value = "{#if doCreate}}create{else}}update{/if}}"/>-->
+    <div class="col-lg-10 align-items-center">
+        <p>
+            <!--        resKey old value-->
+            <input type="hidden" name="userID" value="{{userID}}"/>
+            <!--            input to the form-->
+        </p>
+        <p>
+            First Name: <input type="text" name="firstName" value="{{firstName}}"/><br/>
+        </p>
+        <p>
+            Last Name: <input type="text" name="lastName" value="{{lastName}}"/><br/>
+        </p>
+        <p>
+            Old Password:     <input type="password" name="oldPassword" value="{{oldPassword}}"/><br/>
+        </p>
+        <p>
+            New Password:     <input type="password" name="password" value="{{password}}"/><br/>
+        </p>
+        <p>
+            E-Mail:    <input type="email" name="email" value="{{email}}"/><br/>
+        </p>
+        <p>
+            Phone:     <input type="tel" name="phone" value="{{phone}}"/><br/>
+        </p>
+        <input type="submit" value="Submit"/>
+        <!--    value above gets displayed-->
+    </div>
+</form>

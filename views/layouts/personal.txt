@@ -1,0 +1,27 @@
+Updated Feedback
+Harrison - all your Mongoose/MongoDB functionality works as specified (so no points were taken off for the below needed changes). Please incorporate the following fixes/comments into HW11 (the Bootstrap functionality is required for HW11):
+
+
+
+6. I would recommend pulling out the DB connection and remove the await/terminates as described
+ in the Slack homework channel (there's benefits to both ways, but this makes the code
+  cleaner).
+
+7. I would start thinking about the key property for your reservation Schema. Because we're
+using Mongoose instead of the in-memory store, we automatically get an ObjectId, which is
+unique, when we create a document. So, could you use that instead? And how would you pass
+it as a parameter to the View page instead of the key? Would you need to display it to the
+user (i.e. does it provide any value to the user)? Or maybe it could be their reservation
+number? You have options on how to handle this!
+
+1) Maybe make changes to menu then validate on a count for a particular time frame
+2) Have someone approve the reservations? Connecting an email fwrding feature?
+
+I did not take off for submitting late, however some functionality is missing/incorrect (see below). You can resubmit for a max score of 9/10.
+
+Missing (-2 pts):
+
+- Need to create a controller module for your domain object (similar to the controller created for Notes in the video lecture).
+- Need to place the secret passcode for sessions as an environment variable in IntelliJ.
+- The redirect for login error messages is incorrect (missing forward slashes). Also, the error message partial is not included in the login.hbs file.
+- Missing the justification for why you chose the specific fields for user registration.

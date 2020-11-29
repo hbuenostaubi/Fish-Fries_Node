@@ -1,0 +1,30 @@
+<header>
+    <link rel='stylesheet' href='/stylesheets/style2.css' />
+    <nav class="navbar navbar-light navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mr-0 mr-md-2" href="/"><img class="fish" src="/images/fish.png" width="50"></a>
+        <a class="navbar-brand ml-auto mr-1" href="https://www.instagram.com/" class="button"><i data-feather="instagram"></i></a>
+        <a class="navbar-brand ml-0 mr-1" href="https://www.facebook.com/" class="button"><i data-feather="facebook"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+        <a class="nav-link" href="/" class="button">Home</a>
+        {{#unless loggedIn}}
+            <a class="nav-link" href="/users/login" >Login</a>
+            <a class="nav-link" href="/users/register" >Register</a>
+        {{else}}
+        <a class="nav-link" href="/reservations/add" >Visit</a>
+        <a class="nav-link" href="/reservations/view_list" >Reservations</a>
+        <a class="nav-link" href="/users/account">{{user.fullName}} </a>
+        <a class="nav-link" href="/reservations/jokey-jokes">Joke Corner</a>
+<!--        <a class="nav-link" href="#about" class="button"> About </a>-->
+        <a class="nav-link" href="/users/logout" class="button"> Log out </a>
+<!--        <a class="navbar-brand text-white">{currentUser.fullName}} </a>-->
+        {{/unless}}
+
+        </div>
+
+    </nav>
+</header></br>
+

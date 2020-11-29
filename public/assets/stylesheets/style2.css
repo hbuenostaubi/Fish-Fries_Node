@@ -1,0 +1,65 @@
+h1{
+    text-align: center;
+}
+
+/*  3 images */
+* {
+    box-sizing: border-box;
+    position: relative;
+    top:0;
+    margin:0;
+    padding:0;
+    left:0;
+}
+
+.column {
+    display: block;
+    float: left;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    /*padding: 1px;*/
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+/*   inside the navigation*/
+/* Style the links inside the sidenav */
+.topnav {
+    background-color: #1A1A1A;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav img {
+    float: left;
+    height: 47px;
+    border-radius: 100%;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #000000;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
