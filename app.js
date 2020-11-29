@@ -87,7 +87,7 @@ app.use('/users', usersRouter)
 app.use(appsupport.basicErrorHandler) //take off parenthesis for basicErrorHandler for callback
 app.use(appsupport.handle404) ///callback again as above
 
-const port = appsupport.normalizePort(process.env.PORT || '5000');    ////port number
+const port = appsupport.normalizePort(process.env.PORT || '3000');    ////port number
 exports.port=port
 app.set('port', port);
 
