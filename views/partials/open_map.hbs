@@ -1,0 +1,52 @@
+
+<!--for documentation check docs.mapbox.com-->
+
+
+<div id="menu">
+    <input id="streets-v11" type="radio" name="rtoggle" value="streets" checked="checked">
+    <label for="streets-v11">streets</label>
+    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" >
+    <label for="satellite-v9">satellite</label>
+</div>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+<div id='map'></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGJ1ZW5vMzQiLCJhIjoiY2tta3dodGUzMGlyNjMxcGxtdm91OHg5aCJ9.7VcKmzWW_fca56mWAa-tDw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center:[-86.8495689, 21.1401511],
+        zoom: 15
+    });
+
+    var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+            'Horarios: Lunes a Sábado de 1pm a 10pm; ' +
+            'Whats: 998 385 4112; ' +
+            'mza 21,lt 44, supmza 22'
+    );
+    var marker1 = new mapboxgl.Marker()
+            .setLngLat([-86.8495689, 21.1401511])
+            .setPopup(popup)
+            .addTo(map);
+
+    map.addControl(new mapboxgl.NavigationControl());
+
+    var layerList = document.getElementById('menu');
+    var inputs = layerList.getElementsByTagName('input');
+
+    function switchLayer(layer) {
+        var layerId = layer.target.id;
+        map.setStyle('mapbox://styles/mapbox/' + layerId);
+    }
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].onclick = switchLayer;
+    }
+
+
+</script>
+
+<br>

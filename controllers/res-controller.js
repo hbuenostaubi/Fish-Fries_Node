@@ -141,21 +141,4 @@ exports.resController = {
         return reservation;
 
     }
-
-    // getJokes = async () => {
-    //         let jokePromise = axios.get("https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,racist,sexist&type=single")
-    //         jokePromise
-    //             .then( value => {
-    //                 const newSpan=document.createElement("span")
-    //                 const contentText=document.createTextNode(value.data.joke)
-    //                 newSpan.appendChild(contentText);
-    //                 let el = document.querySelector("div");
-    //                 console.log(el)
-    //                 el.appendChild(newSpan)
-    //                 return document.body.appendChild(el)
-    //             })
-    //             .catch(
-    //                 error => {
-    //                     console.log('error 1: ' + error)
-    //                 })
-    // }
+    

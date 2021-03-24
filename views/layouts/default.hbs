@@ -17,10 +17,22 @@
 
       {{>header}}
     </head>
-    <body>
+    <body class="d-flex flex-column">
+    <div id="page-content" >
+        <div id="content-wrap" class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-7">
         <h1> {{title}}</h1></br>
 
     {{{body}}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    {{>foot}}
+
     </body>
     <script src="/assets/vendor/feather-icons/feather.js"></script>
     <script>

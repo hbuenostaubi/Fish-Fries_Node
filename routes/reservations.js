@@ -33,10 +33,6 @@ router.get('/jokey-jokes', async (req,res,next) =>{
 router.get('/view_list', async (req, res, next) => {
     await resController.viewAll(req, res, next)
 })
-///helper function to get all the notes
-///returns all notes into an object literal
-//ei, [{key:2, title:title}, {key:...}]
-
 
 
 module.exports=router;

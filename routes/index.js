@@ -6,7 +6,7 @@ router.get('/', async function(req, res, next) {
   try{
 
     res.render('index', {
-      title: "Restaurant App",
+      // title: "Fish and Fries",
       layout: 'default',
       styles: ['/stylesheets/style.css','/stylesheets/style2.css']
     })
