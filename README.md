@@ -10,4 +10,5 @@ fishandfries.com.mx
 However, for now, to sample the application a new user can register and view some samples that are commented out:
 
 https://aqueous-fjord-81717.herokuapp.com/users/register
+
 https://aqueous-fjord-81717.herokuapp.com/users/login
