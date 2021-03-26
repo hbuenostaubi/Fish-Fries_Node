@@ -1,6 +1,6 @@
 Harrison Bueno-Staubitz  
 
-###Fish and Fries Website
+### Fish and Fries Website
 
 The application is still under development. I'm working on creating the main advertisement page and connecting MongoDB to a menu that can be uploaded from a csv sheet. I want to make it into a table reservation application and a page that will contain information about the restaurant. 
 
